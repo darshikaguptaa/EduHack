@@ -13,6 +13,7 @@ import scrollreveal from "scrollreveal";
 import "./sass/index.scss";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
+import Buyer from "./components/Buyer";
 
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={ <HomePage/> } />
-        <Route path="/hello" element={ <Home/> } />
+        <Route path="/buyer" element={ <Buyer/> } />
 
     
    

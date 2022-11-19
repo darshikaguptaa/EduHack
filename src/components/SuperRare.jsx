@@ -63,7 +63,7 @@ export default function SuperRare() {
           />
         ))}
       </div>
-      <button className="btn3" onClick={()=>navigate('/hello')}>Explore More</button>
+      <button className="btn3" onClick={()=>navigate('/buyer')}>Explore More</button>
     </div>
   );
 }
