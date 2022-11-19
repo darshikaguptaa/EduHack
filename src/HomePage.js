@@ -7,7 +7,7 @@ import Like from "./components/Like";
 import Navbar from "./components/Navbar";
 import Release from "./components/Release";
 import ScrollToTop from "./components/ScrollToTop";
-import Signup from "./components/Signup";
+// import Signup from "./components/Signup";
 import SuperRare from "./components/SuperRare";
 import scrollreveal from "scrollreveal";
 import "./sass/index.scss";
@@ -18,30 +18,30 @@ const HomePage = () => {
       theme === "dark" ? setTheme("light") : setTheme("dark");
     };
     useEffect(() => {
-      const registerAnimations = () => {
-        const sr = scrollreveal({
-          origin: "bottom",
-          distance: "80px",
-          duration: 2000,
-          reset: false,
-        });
-        sr.reveal(
-          `
-          nav,
-          .home,
-          .free,
-          .clients,
-          .super-rare,
-          .releases,
-          .like,
-          .signup,
-          footer
-      `,
-          {
-            interval: 500,
-          }
-        );
-      };
+      // const registerAnimations = () => {
+      //   const sr = scrollreveal({
+      //     origin: "bottom",
+      //     distance: "80px",
+      //     duration: 2000,
+      //     reset: false,
+      //   });
+      //   sr.reveal(
+      //     `
+      //     nav,
+      //     .home,
+      //     .free,
+      //     .clients,
+      //     .super-rare,
+      //     .releases,
+      //     .like,
+      //     .signup,
+      //     footer
+      // `,
+      //     {
+      //       interval: 500,
+      //     }
+      //   );
+      // };
       // registerAnimations();
       window.scrollTo(0,0);
 
