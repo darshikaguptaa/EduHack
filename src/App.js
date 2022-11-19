@@ -5,7 +5,6 @@ import HomePage from "./HomePage";
 import scrollreveal from "scrollreveal";
 import "./sass/index.scss";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Buyer from "./components/Buyer";
 
 
 function App() {
@@ -52,7 +51,6 @@ function App() {
       <Routes>
 
         <Route path="/" element={ <HomePage/> } />
-        <Route path="/buyer" element={ <Buyer/> } />
 
     
    
