@@ -4,8 +4,10 @@ import super1 from "../assets/shopping.png";
 import super2 from "../assets/shopping4.png";
 import super3 from "../assets/shopping.png";
 import super4 from "../assets/shopping4.png";
+import {  useNavigate } from 'react-router-dom';
 
 export default function SuperRare() {
+  const navigate = useNavigate();
   const data = [
     {
       image: super1,
@@ -61,7 +63,7 @@ export default function SuperRare() {
           />
         ))}
       </div>
-      <button className="btn3">Explore More</button>
+      <button className="btn3" onClick={()=>navigate('/hello')}>Explore More</button>
     </div>
   );
 }

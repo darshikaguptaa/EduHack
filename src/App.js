@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Clients from "./components/Clients";
 import Footer from "./components/Footer";
 // import Free from "./components/Free";
-import Home from "./components/Home";
+import HomePage from "./HomePage";
 import Like from "./components/Like";
 import Navbar from "./components/Navbar";
 import Release from "./components/Release";
@@ -11,6 +11,10 @@ import Signup from "./components/Signup";
 import SuperRare from "./components/SuperRare";
 import scrollreveal from "scrollreveal";
 import "./sass/index.scss";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./components/Home";
+
+
 function App() {
   const [theme, setTheme] = useState("dark");
   const changeTheme = () => {
@@ -50,19 +54,17 @@ function App() {
     nav[0].style.transform = "none";
   }, 1500);
   return (
-    <div data-theme={theme} className="app-container">
-      <ScrollToTop />
-      <Navbar changeTheme={changeTheme} currentTheme={theme} />
-      <Home />
-      <Clients />
-      <Release />
-      {/* <Free /> */}
-      {/* <Clients /> */}
-      <SuperRare />
-      
-      <Like />
-      {/* <Signup /> */}
-      <Footer />
+    <div>
+      <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={ <HomePage/> } />
+        <Route path="/hello" element={ <Home/> } />
+
+    
+   
+      </Routes> 
+    </BrowserRouter>
     </div>
   );
 }
