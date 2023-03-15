@@ -15,61 +15,58 @@ import "./sass/index.scss";
 const HomePage = () => {
     const [theme, setTheme] = useState("dark");
     const changeTheme = () => {
-      theme === "dark" ? setTheme("light") : setTheme("dark");
+        theme === "dark" ? setTheme("light") : setTheme("dark");
     };
     useEffect(() => {
-      // const registerAnimations = () => {
-      //   const sr = scrollreveal({
-      //     origin: "bottom",
-      //     distance: "80px",
-      //     duration: 2000,
-      //     reset: false,
-      //   });
-      //   sr.reveal(
-      //     `
-      //     nav,
-      //     .home,
-      //     .free,
-      //     .clients,
-      //     .super-rare,
-      //     .releases,
-      //     .like,
-      //     .signup,
-      //     footer
-      // `,
-      //     {
-      //       interval: 500,
-      //     }
-      //   );
-      // };
-      // registerAnimations();
-      window.scrollTo(0,0);
-
+        // const registerAnimations = () => {
+        //   const sr = scrollreveal({
+        //     origin: "bottom",
+        //     distance: "80px",
+        //     duration: 2000,
+        //     reset: false,
+        //   });
+        //   sr.reveal(
+        //     `
+        //     nav,
+        //     .home,
+        //     .free,
+        //     .clients,
+        //     .super-rare,
+        //     .releases,
+        //     .like,
+        //     .signup,
+        //     footer
+        // `,
+        //     {
+        //       interval: 500,
+        //     }
+        //   );
+        // };
+        // registerAnimations();
+        window.scrollTo(0, 0);
     }, []);
     window.setTimeout(() => {
-      const home = document.getElementsByClassName("home");
-      home[0].style.transform = "none";
-      const nav = document.getElementsByTagName("nav");
-      nav[0].style.transform = "none";
+        const home = document.getElementsByClassName("home");
+        home[0].style.transform = "none";
+        const nav = document.getElementsByTagName("nav");
+        nav[0].style.transform = "none";
     }, 1500);
     return (
-      <div data-theme={theme} className="app-container">
-        <ScrollToTop />
-        <Navbar changeTheme={changeTheme} currentTheme={theme} />
-        <Home />
-        <Clients />
-        <Release />
-        {/* <Free /> */}
-        {/* <Clients /> */}
-        <SuperRare />
-        
-        <Like />
-        {/* <Signup /> */}
-        <Footer />
-  
-       
-      </div>
-    );
-}
+        <div data-theme={theme} className="app-container">
+            <ScrollToTop />
+            <Navbar changeTheme={changeTheme} currentTheme={theme} />
+            <Home />
+            <Clients />
+            <Release />
+            {/* <Free /> */}
+            {/* <Clients /> */}
+            <SuperRare />
 
-export default HomePage
+            <Like />
+            {/* <Signup /> */}
+            <Footer />
+        </div>
+    );
+};
+
+export default HomePage;
