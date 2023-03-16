@@ -6,6 +6,7 @@ import CartPage from "./CartPage";
 import scrollreveal from "scrollreveal";
 import "./sass/index.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ExploreMore from "./ExploreMore";
 
 function App() {
     // const [theme, setTheme] = useState("dark");
@@ -51,6 +52,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/cart" element={<CartPage />} />
+                    <Route path="/buyer" element={<ExploreMore />} />
                 </Routes>
             </BrowserRouter>
         </div>

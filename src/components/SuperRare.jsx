@@ -1,10 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import super1 from "../assets/shopping.png";
-import super2 from "../assets/shopping4.png";
-import super3 from "../assets/shopping.png";
-import super4 from "../assets/shopping4.png";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CartState } from "../context/Context";
 
 export default function SuperRare() {
@@ -12,7 +8,6 @@ export default function SuperRare() {
         state: { data },
     } = CartState();
 
-    const navigate = useNavigate();
     //   const data = [
     //     {
     //       image: super1,
@@ -69,9 +64,9 @@ export default function SuperRare() {
                     />
                 ))}
             </div>
-            <button className="btn3" onClick={() => navigate("/buyer")}>
+            <Link to="/buyer" className="btn3">
                 Explore More
-            </button>
+            </Link>
         </div>
     );
 }
